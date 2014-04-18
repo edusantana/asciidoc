@@ -719,6 +719,26 @@ DocBook::
   distribution.  The rendering of meta-data elements (or not) is
   DocBook processor dependent.
 
+Passing the Edition as an attribute
++++++++++++++++++++++++++++++++++++
+
+You can pass the `edition` of the book as an attribute:
+
+  $ a2x -f pdf -a edition="Second" book.txt
+
+[WARNING]
+If you are planning using it as an attribute, and were using it inside
+<<X97,docinfo.xml>> you should remove the `edition` tag from there.
+Asciidoc doesn't do any check, if you using it in both places (docinfo
+and attribute) the generated xml will have two `edition` tags at the
+`bookinfo` xml section.
+
+If you are writting your book in a version control systems you can 
+extract a build number and use it as the Edition. Here's an example 
+http://git-scm.com/book/en/Distributed-Git-Maintaining-a-Project#Generating-a-Build-Number[with git]:
+
+  $ a2x -f pdf -a edition=`git describe --tags` book.txt 
+
 
 [[X86]]
 Preamble
