@@ -118,4 +118,11 @@ Renders:
 \right] \]
 ++++++++++++++++++++++++++++++++++++++++++++
 
+Books with latexmath
+--------------------
 
+* https://github.com/edusantana/calculo-diferencial-e-integral-livro/releases[This
+  is a PDF book about mathematics], written in portuguese. You can see
+  its
+  https://github.com/edusantana/calculo-diferencial-e-integral-livro/tree/master/livro/capitulos[code
+  here].
