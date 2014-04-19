@@ -719,6 +719,30 @@ DocBook::
   distribution.  The rendering of meta-data elements (or not) is
   DocBook processor dependent.
 
+Using attributes inside docinfo
++++++++++++++++++++++++++++++++
+
+You can use attributes inside your `docinfo`:
+
+----
+<edition>{edition}</edition>
+----
+
+And then:
+
+ $ a2x -f pdf -a docinfo -a edition="Second" book.txt
+
+[TIP]
+====
+With this, if you are writting your book in a version control system
+you can extract the build number and use it as the Edition. Here's an
+example
+http://git-scm.com/book/en/Distributed-Git-Maintaining-a-Project#Generating-a-Build-Number[with
+git]:
+
+  $ a2x -f pdf -a docinfo -a edition=`git describe --tags` book.txt 
+
+====
 
 [[X86]]
 Preamble
