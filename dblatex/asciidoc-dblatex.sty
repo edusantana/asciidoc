@@ -18,5 +18,6 @@
 
 % For DocBook literallayout elements, see `./dblatex/dblatex-readme.txt`.
 \usepackage{alltt}
-% To preserve simple quotes in the blocs of code
-\usepackage{upquote}
+% To preserve simple quotes in the blocks of code you need to manually install `upquote` package!
+% See https://github.com/asciidoc/asciidoc/pull/42
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
